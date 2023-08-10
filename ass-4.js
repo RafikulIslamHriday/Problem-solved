@@ -2,10 +2,7 @@ function cubeNumber(number) {
     
     if (typeof number !== 'number') {
         return "Input is not a number. Pleace input a number";
-    } else if(number < 0 ){
-        return "Pleace input a positive number"
     }
-    
     const result = Math.pow(number, 3);
     return result;
 
@@ -36,6 +33,33 @@ function sortMaker(arr) {
    const min = Math.min(arr[0], arr[1]);
 
    return [arr[0], arr[1]] = [max, min];
+   
+}
+
+function findAddress(obj) {
+    const street = obj.street || "__";
+    const house = obj.house || "__";
+    const society = obj.society || "__";
+    
+    return street+","+house+","+society;
+}
+
+
+function canPay(changeArray, totalDue) {
+    if(changeArray.length !== 0){
+        let total = 0;
+        for(let i = 0; i < changeArray.length; i++){
+         const element = changeArray[i]
+          total = total + element
+        }
+        if( total >= totalDue){
+           return true
+        }else{
+          return false
+        }
+    }else{
+        return "Array is empty. "
+    }
    
 }
 
