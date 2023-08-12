@@ -67,7 +67,7 @@
 // console.log(result);
 function matchFinder(string1, string2) {
     if (typeof string1 !== 'string' || typeof string2 !== 'string'  ) {
-        return "Input is not a string. Pleace input a string";
+        return "Input is not a string. ";
     }
     if(string1.includes(string2)){
         return true
@@ -78,7 +78,7 @@ function matchFinder(string1, string2) {
 
 
  
-const num1 = "John Deo";
+const num1 = "John abc";
 const num2 = "joh";
 const result = matchFinder(num1, num2)
 console.log(result);
